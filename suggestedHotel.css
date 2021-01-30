@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+header {
+	position: relative;
+	max-width: 85rem;
+	margin: 1.1rem auto;
+	padding: .9rem;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 0 2px 5px rgba(68, 66, 66, 0.3);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	outline: 3px solid #069370;
+	outline-offset: 2px;
+	color: #069370;
+	height: 3.75rem;
+	font-size: 1.5rem;
+	line-height: 3.7rem;
+	text-decoration: none;
+	text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+	font-weight: 500;
+}
+
+nav ul {
+	display: flex;
+}
+
+nav ul li {
+	list-style: none;
+}
+
+nav ul li a {
+	display: block;
+	margin: .6rem 0;
+	padding: .6rem 1.25rem;
+	text-decoration: none;
+	color: #262626;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+	background: #069370;
+	color: #fff;
+	transition: .5s;
+}
+
+@media (max-width:1200px) {
+	header {
+		margin: 1.6rem;
+	}
+}
+
+@media (max-width:810px) {
+
+	header {
+		position: relative;
+	}
+	
+	.menu-toggle {
+		position: absolute;
+		right: 5%;
+		display: block;
+		width: 2.5rem;
+		height: 2.5rem;
+		margin: .6rem;
+		cursor: pointer;
+		text-align: center;
+		font-size: 1.2rem;
+		color: #069370;
+	}
+
+	.menu-toggle::before {
+		content: '\f0c9';
+		font-family: fontAwesome;
+		line-height: 2rem;
+		font-size: 1.6rem;
+	}
+
+	.menu-toggle.active::before {
+		content: '\f00d';
+		font-size: 1.6rem;
+	}
+
+	nav {
+		display: none;
+	}
+
+	nav.active {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	nav.active ul {
+		display: block;
+		position: absolute;
+		top: 89px;
+		left: 0;
+		width: 100%;
+		background: #fff;
+		text-align: center;
+	}
+  
+  nav ul li a {
+		margin: 0;
+	}
+}
+
+
+.card-wrapper {
+    text-align: center;
+    margin: -3rem;
+}
+
+.card {
+    box-sizing: border-box;
+    background: #fff;
+    max-width: 900px;
+    height: 500px;
+    padding: 40px;
+    display: inline-block;
+    margin: 100px 0;
+    border-radius: 15px;
+    position: relative;
+}
+
+.card-copy {
+  width: 50%;
+  float: right;
+  text-align: left;
+  padding: 25px 0;
+}
+
+.card-content {
+    text-align: center;
+    width: 50%;
+    float: left;
+}
+
+.headline {
+    text-transform: uppercase;
+    opacity: .3;
+}
+
+img {
+    width: 40%;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.btn-group {
+    box-sizing: border-box;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    text-align: middle;
+}
+
+.btn-group button {
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background:#f1f1f1;
+}
+
+.btn-buy {
+    box-sizing: border-box;
+    width: 150px;
+    height: 50px;
+    border: none;
+    background: #eff634;
+    text-transform: uppercase;
+    border-radius: 8px;
+  position: absolute;
+  bottom: 40px;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+

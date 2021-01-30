@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestion | DineAt</title>
+    <link rel="stylesheet" href="suggestedHotel.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">Dine At</a>
+        <div class="menu-toggle"></div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">Search</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    
+
+    <div class="card-wrapper">
+            <div class="card">
+              <div class="card-content">
+                <div class=“shoe-view”>
+                  <img src="https://static-1.gumroad.com/res/gumroad/assets/collections/food_and_cooking_thumb-34fb9ef316a7b01177529839891c3a03.jpg"/>
+                  
+                </div>
+              </div>
+              <div class="card-copy">
+                <p class="headline">Restuarent name</p>
+                <h1>574 | New Balance </h1>
+                <p>This 574 sneaker brings you the same premium materials and performance you expect from New Balance refreshed with a premium suede and mesh design and today's comfort technology.</p>
+                <div class="price"> $104.97 </div>
+                <P>Price Range: </P>
+            <a href="#">For more details</a>
+              </div>
+            </div>
+          </div>
+          
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('.menu-toggle').click(function () {
+                $('.menu-toggle').toggleClass('active')
+                $('nav').toggleClass('active')
+            })
+        })
+    </script>
+
+</body>
+
+</html>

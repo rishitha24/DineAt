@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+header {
+	position: relative;
+	max-width: 85rem;
+	margin: 1.1rem auto;
+	padding: .9rem;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 0 2px 5px rgba(68, 66, 66, 0.3);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	outline: 3px solid #069370;
+	outline-offset: 2px;
+	color: #069370;
+	height: 3.75rem;
+	font-size: 1.5rem;
+	line-height: 3.7rem;
+	text-decoration: none;
+	text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+	font-weight: 500;
+}
+
+nav ul {
+	display: flex;
+}
+
+nav ul li {
+	list-style: none;
+}
+
+nav ul li a {
+	display: block;
+	margin: .6rem 0;
+	padding: .6rem 1.25rem;
+	text-decoration: none;
+	color: #262626;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+	background: #069370;
+	color: #fff;
+	transition: .5s;
+}
+
+@media (max-width:1200px) {
+	header {
+		margin: 1.6rem;
+	}
+}
+
+@media (max-width:810px) {
+
+	header {
+		position: relative;
+	}
+	
+	.menu-toggle {
+		position: absolute;
+		right: 5%;
+		display: block;
+		width: 2.5rem;
+		height: 2.5rem;
+		margin: .6rem;
+		cursor: pointer;
+		text-align: center;
+		font-size: 1.2rem;
+		color: #069370;
+	}
+
+	.menu-toggle::before {
+		content: '\f0c9';
+		font-family: fontAwesome;
+		line-height: 2rem;
+		font-size: 1.6rem;
+	}
+
+	.menu-toggle.active::before {
+		content: '\f00d';
+		font-size: 1.6rem;
+	}
+
+	nav {
+		display: none;
+	}
+
+	nav.active {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	nav.active ul {
+		display: block;
+		position: absolute;
+		top: 89px;
+		left: 0;
+		width: 100%;
+		background: #fff;
+		text-align: center;
+	}
+  
+  nav ul li a {
+		margin: 0;
+	}
+}
+  
+  .fancy-cards{
+    text-align: center;
+    margin: 80px auto;
+    margin-left: -4rem
+
+  }
+  .fancy-cards .fancy-card{
+    display: inline-block;
+    position: relative;
+    top: 40px;
+    left: 10px;
+    box-sizing: border-box;
+    padding-left: 3rem
+  }
+  
+  .fancy-card .top,
+  .fancy-card .middle,
+  .fancy-card .bottom{
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+    width: 250px;
+    height: 250px;
+    transition: transform 300ms linear-out;
+  }
+  .fancy-card .top{
+    z-index: 3;
+    transform: scale(1.0);
+    transition: transform 300ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    background-image: url('https://static-1.gumroad.com/res/gumroad/assets/collections/food_and_cooking_thumb-34fb9ef316a7b01177529839891c3a03.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 1px 3px rgba(25,25,25,0.30);
+  }
+  .fancy-card .middle{
+    position: absolute;
+    background: #069370;
+    top: 0px;
+    z-index: 2;
+    transform: rotate(0deg);
+    transition: transform 250ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  .fancy-card .bottom{
+    position: absolute;
+    background:#16705a;
+    top: 0px;
+    z-index: 1;
+    transform: rotate(0deg);
+    transition: transform 250ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  .fancy-card .caption{
+    overflow: hidden;
+    background: rgba(255,255,255,0.75);
+    padding: 15px 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+  }
+  .fancy-card .caption .title{
+    color: #222;
+    margin: 0px 0px 15px 0px;
+    font-size: 1.4rem;
+  }
+  .fancy-card .caption .button{
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    border: solid 1px #555;
+    padding: 7px 13px;
+    background-color: transparent;
+    transition: all 300ms ease-in;
+  }
+  
+  
+  /*hovering*/
+  .fancy-card:hover .top{
+    transform: scale(1.05);
+  }
+  .fancy-card:hover .middle{
+   transform: rotate(-7deg);
+   box-shadow: 1px 1px 2px rgba(74, 74, 74, 0.35);
+  }
+  .fancy-card:hover .bottom{
+    transform: rotate(7deg);
+    box-shadow: 1px 1px 2px rgba(113, 113, 113, 0.35);
+  }
+  
+  .fancy-card:hover .button{
+    background: #069370;
+    color: #fff;
+    border: 0px;
+  }
+  
