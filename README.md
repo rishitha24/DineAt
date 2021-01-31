@@ -1,5 +1,8 @@
 # DineAt
 
+### Description
+Shows you the near by few restaurants based on price where one being too fancy and one being at cheap cost whereas the other 2 are of in between them based on the reviews and ratings too!
+
 ### The problem Dine At solves
 1. When a person is new to the city, they wouldn't like spending much time on searching for a restaurant. This website will solve this issue. The main purpose of this website is to make the user work easier for someone who is new.
 
