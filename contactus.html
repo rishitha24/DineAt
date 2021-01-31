@@ -1,0 +1,518 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="contactus.css" />
+  
+    <script src="main.js"></script>
+
+    <style>
+        #snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px;
+    font-size: 17px;
+    width: 50%;
+  }
+
+  .tablink:hover {
+    background-color: #777;
+  }
+
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+    font-size: 1.3em;
+  }
+
+  #left {
+    background: linear-gradient(to bottom left, #ff66cc 0%, #ff6666 75%);
+  }
+
+  #right {
+    background: linear-gradient(to bottom right, #0066cc 0%, #2eb8b8 75%);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    resize: vertical;
+    transition: 0.5s;
+    outline: none;
+  }
+
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border: 2px solid #000;
+  }
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: #fff;
+  }
+
+  input[type="button"] {
+    background-color: rgba(255, 255, 255, 0);
+    border: 3px solid #fff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    float: right;
+    margin-top: 2%;
+    width: 100%;
+    transition: 0.5s;
+  }
+
+  input[type="button"]:hover {
+    background-color: #fff;
+    border: 3px solid #fff;
+    color: #000;
+  }
+
+  .container {
+    background-color: #555;
+    padding: 20px;
+    width: 100%;
+    float: right;
+  }
+
+  .col-25 {
+    float: left;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .col-75 {
+    float: left;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .tab {
+    width: 100%;
+  }
+
+  .tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px;
+    font-size: 17px;
+    width: 50%;
+  }
+
+  .tablink:hover {
+    background-color: #777;
+  }
+
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+  #left {
+    background: linear-gradient(to bottom left, #ff66cc 0%, #ff6666 75%);
+  }
+
+  #right {
+    background: linear-gradient(to bottom right, #0066cc 0%, #2eb8b8 75%);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    resize: vertical;
+    transition: 0.5s;
+    outline: none;
+  }
+
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border: 2px solid #000;
+  }
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: #fff;
+  }
+
+  input[type="button"] {
+    background-color: rgba(255, 255, 255, 0);
+    border: 3px solid #fff;
+    color: white;
+    padding: 6px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    float: right;
+    margin-top: 1%;
+    transition: 0.5s;
+  }
+
+  input[type="button"]:hover {
+    background-color: #fff;
+    border: 3px solid #fff;
+    color: #000;
+  }
+
+  .container {
+    background-color: #555;
+    padding: 20px;
+    width: 100%;
+    float: right;
+  }
+
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .split {
+    background-color: #555;
+  }
+
+  .tab {
+    width: 50%;
+    float: left;
+  }
+
+  .tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 11.5px;
+    font-size: 17px;
+    width: 50%;
+  }
+
+  .tablink:hover {
+    background-color: #777;
+  }
+
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+  #left {
+    background: linear-gradient(to bottom left, #ff66cc 0%, #ff6666 75%);
+  }
+
+  #right {
+    background: linear-gradient(to bottom right, #0066cc 0%, #2eb8b8 75%);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    resize: vertical;
+    transition: 0.5s;
+    outline: none;
+  }
+
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border: 2px solid #000;
+  }
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: #fff;
+  }
+
+  input[type="button"] {
+    background-color: rgba(255, 255, 255, 0);
+    border: 3px solid #fff;
+    color: white;
+    padding: 6px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    float: right;
+    margin-top: 1%;
+    transition: 0.5s;
+  }
+
+  input[type="button"]:hover {
+    background-color: #fff;
+    border: 3px solid #fff;
+    color: #000;
+  }
+
+  .container {
+    background-color: #555;
+    padding: 20px;
+    width: 50%;
+    float: right;
+  }
+
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+    </style>
+</head>
+
+<body style=" background: linear-gradient(to bottom right, #174649 0%, #2eb8b8 75%); margin-top: -2rem" >
+    
+    
+
+    <div class="ct" style="padding-top: 3%;">
+        <center>
+            <h1 style="color: white">Dine At</h1>
+        </center>
+        <div class="tab">
+            <div id="left" class="tabcontent">
+                <h1>Contact Us</h1>
+                <h3>Sreya</h3>
+                <p>AndhraPradesh, India</p>
+               
+            </div>
+
+            <div id="right" class="tabcontent">
+                <h1>Contact Us</h1>
+                <h3>Rishitha</h3>
+               <p>AndhraPradesh, India</p>
+            </div>
+
+            <button class="tablink" onclick="opent('left', this, '#ff6666')" id="defaultOpen">Sreya</button>
+            <button class="tablink" onclick="opent('right', this, '#2eb8b8')">Rishitha</button>
+        </div>
+
+        <div class="split">
+            <div class="container">
+                <form>
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Name:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" name="Name" placeholder="Full Name">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Email:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="email" name="Email" placeholder="example@emali.com">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Phone Number:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="tel" name="Phone Number" placeholder="+60 xx-xxxxxxx">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label>Message:</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea name="Message" placeholder="Type Message Here..." style="height:100px"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input onclick="myFunction()" type="button" value="Send">
+                    </div>
+                </form>
+            </div>
+
+            <iframe src="https://api.mapbox.com/styles/v1/xiong15/ck7t7j1m23qub1jo3kyhms631.html?fresh=true&access_token=pk.eyJ1IjoieGlvbmcxNSIsImEiOiJjamkycDJrNGUwZTFwM3FsZzhpM2oxeHc0In0.Nu80_KJZ8zmreVRjZTHJ2w"
+                width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="snackbar">Sending...</div>
+    </div>
+</body>
+
+<script>
+    function opent(tName, elmnt, color) {
+        var i, tabcontent, tablink;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablink = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablink.length; i++) {
+            tablink[i].style.backgroundColor = "";
+        }
+        document.getElementById(tName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+    }
+    document.getElementById("defaultOpen").click();
+
+    function myFunction() {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function () {
+            x.className = x.className.replace("show", "");
+        }, 5000);
+    }
+
+</script>
+
+</html>
