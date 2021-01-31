@@ -120,7 +120,8 @@ nav ul li a:hover {
   .fancy-cards{
     text-align: center;
     margin: 80px auto;
-    margin-left: -4rem
+    margin-left: -4rem;
+    margin-top: -20rem;
 
   }
   .fancy-cards .fancy-card{
@@ -211,4 +212,56 @@ nav ul li a:hover {
     color: #fff;
     border: 0px;
   }
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+      margin-top: -20rem; 
+    
+  }
   
+  .searchInputWrapper {
+    position: relative;
+    
+  }
+  
+  .searchInput {
+    width: 20rem;
+    height: 2rem;
+ 
+    padding: 0 1rem; 
+    border-radius: 2rem;
+    border: none;
+    transition: transform 0.1s ease-in-out;
+    background: #069370; 
+  }
+  
+  ::placeholder {
+    color: #f5f3f3;
+  }
+  
+  /* hide the placeholder text on focus */
+  :focus::placeholder {
+    text-indent: -999px
+  }
+  
+  .searchInput:focus {
+    outline: none;
+    transform: scale(1.1);
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .searchInputIcon {
+    position: absolute;
+    right: 0.8rem;
+    top: 0.5rem;
+    color: #f5f3f3;
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .container:focus-within > 
+  .searchInputWrapper > .searchInputIcon {
+    right: 0.2rem;
+  }
